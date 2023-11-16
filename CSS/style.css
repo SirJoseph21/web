@@ -1,0 +1,136 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0B0FF;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: #00ac00;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: colorChange 2s infinite alternate;
+    filter: brightness(1.2);
+}
+
+@keyframes colorChange {
+    from { color: purple; }
+    to { color: pink; }
+}
+
+/* Efecto al pasar el mouse sobre el título */
+header h1:hover {
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    flex: 0 0 calc(30% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de elevación sutil al pasar el ratón */
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Estilo para cambiar el color de fondo y aplicar efectos al pasar el ratón */
+.card:hover {
+    background-color: #ffecb3;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    border-color: #ff4500; /* Nuevo estilo para el borde al pasar el ratón */
+}
+
+/* Transición para el estado normal */
+.card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease; /* Agregamos transición a la propiedad border-color */
+}
+
+/* Estilo para la sección de la revista digital */
+#revista {
+    width: 100%;
+    height: 600px; /* Ajusta la altura según tus preferencias */
+    overflow: hidden; /* Para ocultar cualquier contenido que sobresalga del contenedor */
+    margin-top: 20px; /* Ajusta el margen superior según tus preferencias */
+}
+
+/* Estilo para el iframe de la revista digital */
+#revista iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease; /* Agregamos transición de opacidad */
+}
+
+/* Estilo para cambiar la opacidad al pasar el mouse sobre la revista digital */
+#revista:hover iframe {
+    opacity: 0.9; /* Ajusta el nivel de opacidad según tus preferencias */
+}
+
+/* Estilo para el borde alrededor de la revista digital */
+#revista:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: border-color 0.3s ease; /* Agregamos transición de color al borde */
+}
+
+
+
+footer {
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    transition: background-color 0.3s ease; /* Agregamos transición al color de fondo del pie de página */
+}
+
+/* Efecto de cambio de color al pasar el ratón sobre el pie de página */
+footer {
+    transition: opacity 0.3s ease;
+}
+
+footer {
+    transition: transform 0.3s ease;
+}
+
+footer:hover {
+    transform: scale(1.05); /* Ajusta el nivel de escala al pasar el ratón */
+}
